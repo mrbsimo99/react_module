@@ -1,17 +1,7 @@
-import { Component } from "react";
+import HelloWorld from "./components/HelloWorld";
 
-class HelloWorld extends Component {
-
-  title = "Hello World"
-  text = "Il paragrafo"
-
-  render() {
-    return (
-      <>
-        <h1>{this.title}</h1>
-        <p>{this.text}</p>
-      </>)
-  }
+const App = () => {
+  <HelloWorld />
 }
 
-export default HelloWorld;
+export default App;
