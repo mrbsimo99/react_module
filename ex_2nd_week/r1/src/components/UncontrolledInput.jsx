@@ -1,10 +1,15 @@
-
+import { useRef } from 'react';
 
 const UncontrolledInput = () => {
 
+    const inputRef = useRef(null);
+
+    const handleClick = () => {
+        alert(inputRef.current.value)
+    }
+
     const handleSubmit = (e) => {
         e.preventDefault();
-
 
         const form = new FormData(e.target);
         const data = Object.fromEntries(form);
@@ -15,9 +20,8 @@ const UncontrolledInput = () => {
     return (
         <>
             <form onSubmit={handleSubmit}>
-                <input type="text" name="first_name" />
-                <input type="text" name="last_name" />
-                <button type="submit">Invia</button>
+                <input type="text" ref={inputRef} name="first_name" placeholder='Inserire nome' />
+                <button type="submit" onClick={handleClick}>Invia</button>
             </form>
         </>
     )
