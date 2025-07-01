@@ -12,22 +12,22 @@ const TodoList = () => {
 
     return (
         <>
-        <div>
-            <input
-                type="text"
-                placeholder="Cerca..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-            />
-               <ul>
-                {filteredTodos && filteredTodos.map((item) => (
-                    <li key={item.id}>
-                        {item.title}
-                    </li>
-                ))}
-            </ul>
-        </div>
-         
+            <div>
+                <input
+                    type="text"
+                    placeholder="Cerca"
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                />
+                <ul>
+                    {filteredTodos && filteredTodos.map((item) => (
+                        <li key={item.id}>
+                            {item.title}
+                        </li>
+                    ))}
+                </ul>
+            </div>
+
         </>
     )
 }
