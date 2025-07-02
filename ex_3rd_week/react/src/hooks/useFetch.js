@@ -30,13 +30,13 @@ export const useFetch = (url, options = DEFAULT_OPTIONS) => {
         } catch (error) {
             setError(error.message);
         } finally {
-           if (loading) setLoading(false);
+            if (loading) setLoading(false);
         }
     };
 
     useEffect(() => {
         fetchData();
-    }, [url]);
+    }, [url, JSON.stringify(options)]);
 
     return {
         data,

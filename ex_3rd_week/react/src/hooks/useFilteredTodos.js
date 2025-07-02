@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useFetch } from "./useFetch";
 
 export const useFilteredTodos = (todos, searchTerm) => {
     const [filteredTodos, setFilteredTodos] = useState([]);
@@ -13,14 +14,9 @@ export const useFilteredTodos = (todos, searchTerm) => {
         const filtered = filterTodos();
         setFilteredTodos(filtered);
 
-    }, [searchTerm]);
+    }, [searchTerm, todos]);
 
-    /*  useEffect(() => {
-        const filtered = todos.filter(todo =>
-            todo.title.toLowerCase().includes(searchTerm.toLowerCase())
-        );
-        setFilteredTodos(filtered);
-    }, [searchTerm]); */
+
 
     return filteredTodos;
 
