@@ -34,7 +34,7 @@ const TodoList = () => {
     return (
         <>
             <div>
-                <input
+                <input ref={inputRef}
                     type="text"
                     placeholder="Cerca"
                     value={searchTerm}
