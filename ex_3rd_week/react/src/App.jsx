@@ -11,11 +11,6 @@ const App = () => {
       <TodoList />
     </TodoProvider>
     </>
-    /* per usare UseContext
-        <TodoProvider>
-                <TodoList />
-            </TodoProvider>
-            */
   )
 }
 
