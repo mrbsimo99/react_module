@@ -1,21 +1,19 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useContext } from "react";
 import { useFetch } from "../hooks/useFetch";
 import { useFilteredTodos } from "../hooks/useFilteredTodos";
-// import { TodoContext } from "../context/TodoContext";
+import { TodoContext } from "./TodoContext";
 
 const API_URL = "https://jsonplaceholder.typicode.com/todos";
 const OPTIONS = { method: "GET" };
 
 const TodoList = () => {
-    const { data } = useFetch(API_URL, OPTIONS);
+     // const { data } = useFetch(API_URL, OPTIONS);
     const [searchTerm, setSearchTerm] = useState("");
     const inputRef = useRef(null)
 
     // Per usare useContext >>
-    // const { todos: data, loading, error, reload } = useContext(TodoContext); //
-
-
-    const filteredTodos = useFilteredTodos(data || [], searchTerm);
+     const { todos: data, loading, error, reload } = useContext(TodoContext); 
+     const filteredTodos = useFilteredTodos(data || [], searchTerm);
 
 
     // Esercizio useCallback
@@ -35,10 +33,10 @@ const TodoList = () => {
    */
 
     useEffect(() => {
-        if (inputRef.current) {
-            inputRef.current.focus()
-        }
-    })
+  if (inputRef.current) {
+    inputRef.current.focus();
+  }
+}, []);
 
     return (
         <>

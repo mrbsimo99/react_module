@@ -1,13 +1,15 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import TodoList from './components/TodoList'
-// import { TodoProvider } from './components/TodoContext'
+import { TodoProvider } from './components/TodoContext'
 
 const App = () => {
 
   return (
     <>
+         <TodoProvider>
       <TodoList />
+    </TodoProvider>
     </>
     /* per usare UseContext
         <TodoProvider>
