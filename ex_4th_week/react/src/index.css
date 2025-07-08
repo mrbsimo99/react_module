@@ -1,6 +1,6 @@
 nav {
   display: flex;
-  gap: 10px;
+  gap: 8px;
   padding: 20px;
   margin-left: 18px;
 }
@@ -11,7 +11,7 @@ nav {
   background-color: rgb(26, 26, 218);
   border: 1px solid rgb(26, 26, 218);
   border-radius: 10px;
-  padding: 10px;
+  padding: 8px;
 }
 
 .link:hover {
