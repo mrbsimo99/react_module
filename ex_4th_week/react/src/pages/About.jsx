@@ -13,7 +13,7 @@ const About = () => {
     return (
         <>
             <h1>About</h1>
-            <button onClick={HandleRedirect}>Redirect to Home</button>
+            <button className="about-btn" onClick={HandleRedirect}>Redirect to Home</button>
         </>
     )
 
