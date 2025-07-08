@@ -6,14 +6,14 @@ const About = () => {
 
     const navigate = useNavigate();
 
-    const RedirectHome = () => {
+    const HandleRedirect = () => {
         navigate('/')
     }
 
     return (
         <>
             <h1>About</h1>
-            <button onClick={RedirectHome}>Redirect to Home</button>
+            <button onClick={HandleRedirect}>Redirect to Home</button>
         </>
     )
 
