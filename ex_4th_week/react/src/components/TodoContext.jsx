@@ -1,4 +1,4 @@
-import { createContext } from "react";
+import { createContext, useContext } from "react";
 import { useFetch } from "../hooks/useFetch";
 
 export const TodoContext = createContext();
@@ -15,3 +15,4 @@ export const TodoProvider = ({ children }) => {
         </TodoContext.Provider>
     );
 };
+

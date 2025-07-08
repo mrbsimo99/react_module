@@ -2,6 +2,8 @@ import { useEffect, useRef, useState, useContext, useMemo } from "react";
 import { useFetch } from "../hooks/useFetch";
 import { useFilteredTodos } from "../hooks/useFilteredTodos";
 import { TodoContext } from "./TodoContext";
+import { Link } from 'react-router-dom';
+
 // importare useFilteredTodos e applicala a useMemo 
 
 const API_URL = "https://jsonplaceholder.typicode.com/todos";
@@ -50,7 +52,7 @@ const TodoList = () => {
                 <ul>
                     {filteredTodos && filteredTodos.map((item) => (
                         <li key={item.id}>
-                            {item.title}
+                           <Link to={`/todos/${item.id}`}>{item.title}</Link> 
                         </li>
                     ))}
                 </ul>
