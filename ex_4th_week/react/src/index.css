@@ -2,6 +2,7 @@ nav {
   display: flex;
   gap: 10px;
   padding: 20px;
+  margin-left: 18px;
 }
 
 .link {
@@ -21,6 +22,7 @@ footer {
   display: flex;
   padding: 10px;
   justify-content: center;
+  color: rgb(26, 26, 218);
 }
 
 .about-btn {
@@ -33,7 +35,44 @@ footer {
   padding: 10px;
 }
 
-.about-btn:hover {
+.about-btn:hover, .submit-btn:hover, .links:hover {
   color: rgb(116, 179, 203);
   cursor: pointer;
 }
+
+.submit-btn {
+  padding: 4px 8px;
+  margin-left: 4px;
+  color: white;
+  background-color: rgb(26, 26, 218);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.list {
+  list-style-type: none;
+  font-size: 20px;
+
+}
+
+.links {
+  color: rgb(26, 26, 218);
+  text-decoration: none;
+  
+}
+
+.input {
+    padding: 4px 8px;
+    margin: 4px 0;
+    margin-left: 36px;
+    
+}
+
+.input::placeholder{
+   font-weight: bold;
+  opacity: 0.5;
+  color: rgb(26, 26, 218);
+
+}
+
