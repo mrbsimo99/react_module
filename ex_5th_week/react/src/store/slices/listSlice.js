@@ -20,12 +20,27 @@ const listSlice = createSlice({
             state.error = action.payload;
             state.loading = false;
         },
-        setCompletedTodo(state, action) {
+
+        // usa Map invece di Find (Find utilizza oggetto originale, map ne crea una copia nuova)
+        /* setCompletedTodo(state, action) {
             const todoId = action.payload;
             const todo = state.items.find(item => item.id === todoId);
             if (todo) {
                 todo.completed = !todo.completed;
             }
+        }
+     */
+        setCompletedTodo(state, action) {
+            const todoId = action.payload;
+            state.items = state.items.map(item => {
+                if (item.id === todoId) {
+                    return {
+                        ...item, completed: !item.completed
+                    };
+
+                }
+                return item;
+            })
         }
     },
 });
